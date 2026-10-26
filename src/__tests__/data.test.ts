@@ -112,5 +112,11 @@ describe('Data Module', () => {
             expect(discord).toBeDefined();
             expect(isAppAvailable(discord!, 'ubuntu')).toBe(false);
         });
+
+        it('should return true for GNOME Boxes on Snap', () => {
+            const gnomeBoxes = apps.find(a => a.id === 'gnomeboxes');
+            expect(gnomeBoxes).toBeDefined();
+            expect(isAppAvailable(gnomeBoxes!, 'snap')).toBe(true);
+        });
     });
 });
