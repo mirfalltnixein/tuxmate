@@ -224,7 +224,7 @@
             "nix": "gnome-boxes",
             "flatpak": "org.gnome.Boxes"
         },
-        "unavailableReason": "GNOME Boxes is not available as a Snap package.",
+        "unavailableReason": "GNOME Boxes is not available as a Snap or Homebrew package.",
         "icon": {
             "type": "iconify",
             "set": "simple-icons",

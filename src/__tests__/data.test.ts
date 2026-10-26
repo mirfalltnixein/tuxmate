@@ -58,6 +58,14 @@ describe('Data Module', () => {
                 expect(categories).toContain(app.category);
             });
         });
+
+        it('should mention Homebrew in Snap unavailability reasons when Homebrew is unavailable', () => {
+            const snapOnlyReasons = apps.filter(app =>
+                !app.targets.homebrew && /Snap package/i.test(app.unavailableReason || '')
+            );
+
+            expect(snapOnlyReasons).toEqual([]);
+        });
     });
 
     describe('categories', () => {
